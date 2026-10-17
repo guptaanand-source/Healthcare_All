@@ -1,0 +1,181 @@
+.my-appointments-page {
+  min-height: 100vh;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #eef6ff, #f0fdfa);
+  font-family: Arial, sans-serif;
+  color: #183153;
+}
+
+.my-appointments-back {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #1769aa;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+.my-appointments-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.my-appointments-header span {
+  color: #0d9488;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.my-appointments-header h1 {
+  margin: 12px 0;
+  font-size: 34px;
+}
+
+.my-appointments-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.my-appointments-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.my-appointment-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e1eaf2;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(25, 70, 110, 0.07);
+}
+
+.my-appointment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.my-appointment-top h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.my-appointment-specialization {
+  margin: 0;
+  color: #0d9488;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.my-appointment-status {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.my-appointment-status.booked {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.my-appointment-status.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.my-appointment-detail {
+  margin: 12px 0;
+  color: #475569;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.my-appointment-reason {
+  margin-top: 18px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  color: #475569;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.my-appointment-cancel {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.my-appointment-cancel:hover {
+  background: #ffe4e6;
+}
+
+.my-appointment-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.my-appointments-message {
+  max-width: 850px;
+  margin: 0 auto 20px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f0fdfa;
+  color: #115e59;
+  overflow-wrap: anywhere;
+}
+
+.my-appointments-empty {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 42px 20px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e1eaf2;
+  border-radius: 18px;
+}
+
+.my-appointments-empty-icon {
+  font-size: 42px;
+}
+
+.my-appointments-empty h2 {
+  margin-bottom: 10px;
+}
+
+.my-appointments-empty p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .my-appointments-page {
+    padding: 20px 14px;
+  }
+
+  .my-appointments-header h1 {
+    font-size: 28px;
+  }
+
+  .my-appointment-card {
+    padding: 18px;
+  }
+}

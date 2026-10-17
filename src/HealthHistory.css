@@ -1,0 +1,257 @@
+.health-history-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f3f8fc;
+  color: #23445b;
+  box-sizing: border-box;
+}
+
+.history-back-button {
+  padding: 10px 16px;
+  border: 1px solid #d7e5ee;
+  border-radius: 10px;
+  background: white;
+  color: #087f8c;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.history-back-button:hover {
+  background: #e8f7f7;
+}
+
+.history-header {
+  max-width: 850px;
+  margin: 35px auto 28px;
+  text-align: center;
+}
+
+.history-eyebrow {
+  color: #087f8c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.history-header h1 {
+  margin: 12px 0;
+  color: #173b56;
+  font-size: clamp(30px, 5vw, 42px);
+}
+
+.history-header p {
+  margin: 0 auto;
+  max-width: 600px;
+  color: #6b8294;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.history-form-card,
+.history-records-section {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 28px;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid #e0ebf2;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(31, 74, 100, 0.06);
+}
+
+.history-form-card h2,
+.history-records-section h2 {
+  margin: 0 0 22px;
+  color: #173b56;
+  font-size: 21px;
+}
+
+.history-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.history-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #36556b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.history-form input,
+.history-form select,
+.history-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d6e2eb;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfdff;
+  color: #23445b;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.history-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.history-form input:focus,
+.history-form select:focus,
+.history-form textarea:focus {
+  border-color: #087f8c;
+  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.12);
+}
+
+.history-save-button {
+  align-self: flex-start;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #087f8c;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.history-save-button:hover {
+  background: #066772;
+  transform: translateY(-1px);
+}
+
+.history-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.history-message {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #e8f7f5;
+  color: #087268;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.history-records-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.history-record-card {
+  padding: 20px;
+  border: 1px solid #e0ebf2;
+  border-radius: 14px;
+  background: #fbfdff;
+  overflow-wrap: anywhere;
+}
+
+.history-record-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.history-type-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e4f5f4;
+  color: #087f8c;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.history-record-date {
+  color: #72889a;
+  font-size: 12px;
+}
+
+.history-record-card h3 {
+  margin: 0 0 10px;
+  color: #173b56;
+  font-size: 18px;
+}
+
+.history-record-card p {
+  color: #637b8d;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.history-delete-button {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border: 1px solid #f0caca;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #b83232;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.history-delete-button:hover {
+  background: #ffe8e8;
+}
+
+.history-empty {
+  padding: 35px 15px;
+  border: 1px dashed #ccdde8;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.history-empty h3 {
+  margin: 0 0 8px;
+  color: #36556b;
+}
+
+.history-empty p {
+  margin: 0;
+  color: #7b8fa0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .health-history-page {
+    padding: 18px 12px;
+  }
+
+  .history-header {
+    margin-top: 28px;
+  }
+
+  .history-form-card,
+  .history-records-section {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .history-save-button {
+    width: 100%;
+  }
+
+  .history-records-list {
+    grid-template-columns: 1fr;
+  }
+}

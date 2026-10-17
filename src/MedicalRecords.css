@@ -1,0 +1,386 @@
+/* ===== HealthConnect Medical Records ===== */
+
+.medical-records-page {
+  min-height: 100vh;
+  padding: 40px max(20px, calc((100% - 1100px) / 2));
+  background: #f4f8fc;
+  color: #183047;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.medical-records-page * {
+  box-sizing: border-box;
+}
+
+.records-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.records-eyebrow {
+  color: #087f8c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.records-header h1 {
+  margin: 10px 0;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.records-header p,
+.add-report-section > p,
+.reports-heading p {
+  color: #718295;
+  line-height: 1.6;
+}
+
+.records-back {
+  cursor: pointer;
+  font: inherit;
+  padding: 11px 16px;
+  border: 1px solid #dce7f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #087f8c;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.records-back:hover {
+  background: #e8f8f8;
+}
+
+.records-back:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Privacy notice */
+
+.records-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 28px;
+  border: 1px solid #c8e9ee;
+  border-radius: 14px;
+  background: #e9f8fa;
+  color: #315c78;
+}
+
+.records-notice > span {
+  font-size: 23px;
+}
+
+.records-notice p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Add report form */
+
+.add-report-section {
+  padding: 28px;
+  margin-bottom: 36px;
+  border: 1px solid #e1ebf2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(27, 68, 100, 0.05);
+}
+
+.add-report-section h2 {
+  margin: 0 0 10px;
+  font-size: 23px;
+}
+
+.add-report-section > p {
+  margin: 0 0 24px;
+}
+
+.add-report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.add-report-form label {
+  margin-top: 8px;
+  color: #344c61;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.add-report-form input,
+.add-report-form textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d8e3ed;
+  border-radius: 10px;
+  background: #fbfdff;
+  color: #183047;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.add-report-form input:focus,
+.add-report-form textarea:focus {
+  border-color: #1599a6;
+  box-shadow: 0 0 0 3px rgba(21, 153, 166, 0.12);
+}
+
+.add-report-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.save-report-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #087f8c;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.save-report-button:hover {
+  background: #066873;
+  transform: translateY(-1px);
+}
+
+.save-report-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success and error messages */
+
+.report-message {
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.report-message.success {
+  background: #e8f8ef;
+  color: #176b40;
+}
+
+.report-message.error {
+  background: #fff0f0;
+  color: #b42332;
+}
+
+.report-message.info {
+  background: #edf6ff;
+  color: #245b8f;
+}
+
+/* Reports list */
+
+.reports-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.reports-heading h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.reports-heading p {
+  margin: 0;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.report-card {
+  position: relative;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e1ebf2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(27, 68, 100, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.report-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(27, 68, 100, 0.09);
+}
+
+.report-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  font-size: 25px;
+}
+
+.report-icon.red {
+  background: #fff0f0;
+}
+
+.report-icon.blue {
+  background: #e8f3ff;
+}
+
+.report-icon.green {
+  background: #e5f8ed;
+}
+
+.report-status {
+  position: absolute;
+  top: 27px;
+  right: 18px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8f8ef;
+  color: #176b40;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.report-card h3 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.report-category {
+  color: #718295;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.report-divider {
+  height: 1px;
+  margin: 20px 0;
+  background: #e8eef4;
+}
+
+.report-date {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #61788c;
+  font-size: 13px;
+}
+
+/* Delete button */
+
+.delete-report-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-report-button:hover {
+  background: #ffe4e6;
+}
+
+.delete-report-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Empty reports state */
+
+.empty-reports {
+  padding: 38px 20px;
+  border: 1px dashed #cad9e6;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+}
+
+.empty-reports > span {
+  font-size: 35px;
+}
+
+.empty-reports h3 {
+  margin: 12px 0 8px;
+}
+
+.empty-reports p {
+  color: #718295;
+  line-height: 1.6;
+}
+
+/* Mobile responsive layout */
+
+@media (max-width: 650px) {
+  .medical-records-page {
+    padding: 24px 16px;
+  }
+
+  .records-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .records-header h1 {
+    font-size: 29px;
+  }
+
+  .add-report-section {
+    padding: 20px 16px;
+  }
+
+  .add-report-section h2 {
+    font-size: 21px;
+  }
+
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .report-card {
+    padding: 20px;
+  }
+}
